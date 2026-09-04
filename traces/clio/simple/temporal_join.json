@@ -1,0 +1,236 @@
+{
+  "note": "temporal (time-order) join; no shared key yet \u2014 Stage 3 will add vLLM response id",
+  "n_pairs": 10,
+  "pairs": [
+    {
+      "pair": 1,
+      "prompt": "What is 17 multiplied by 23? Show your reasoning step by step.",
+      "session_id": "sess_698ee2cc5169",
+      "turn_status": "turn.completed",
+      "clio": {
+        "workflow_id": "84799e6a-f534-5d92-89e7-3429095344b7",
+        "task_id": "6e2009aa-738e-5db1-bd7a-94c969a3e0bd",
+        "model_id": "hosted_vllm/granite-4.2-30b",
+        "logged_at": "2026-09-04T13:52:27.713Z"
+      },
+      "kvnorm": {
+        "request_id": "chatcmpl-80fdc07ecb38f335-80b6501f:g0",
+        "num_computed_tokens": 7835,
+        "score_len": 7835,
+        "score_min": 4.42854,
+        "score_max": 38.932,
+        "score_mean": 9.25928,
+        "metric": null,
+        "started_at": "2026-09-04T13:52:07.918Z",
+        "ended_at": "2026-09-04T13:52:27.695Z"
+      }
+    },
+    {
+      "pair": 2,
+      "prompt": "Explain the difference between a stack and a queue data structure in one paragraph.",
+      "session_id": "sess_159a01e86577",
+      "turn_status": "turn.completed",
+      "clio": {
+        "workflow_id": "560b200f-48d3-5316-9364-38605c088bff",
+        "task_id": "9dfa98d6-db61-5131-a5db-da7ca94e8837",
+        "model_id": "hosted_vllm/granite-4.2-30b",
+        "logged_at": "2026-09-04T13:52:50.5Z"
+      },
+      "kvnorm": {
+        "request_id": "chatcmpl-b87a8d1e2166bde7-a58480df:g0",
+        "num_computed_tokens": 7868,
+        "score_len": 7868,
+        "score_min": 4.42981,
+        "score_max": 38.80653,
+        "score_mean": 9.30549,
+        "metric": null,
+        "started_at": "2026-09-04T13:52:30.272Z",
+        "ended_at": "2026-09-04T13:52:50.492Z"
+      }
+    },
+    {
+      "pair": 3,
+      "prompt": "Explain the difference between a stack and a queue data structure in one paragraph.",
+      "session_id": "sess_159a01e86577",
+      "turn_status": "turn.completed",
+      "clio": {
+        "workflow_id": "560b200f-48d3-5316-9364-38605c088bff",
+        "task_id": "d6f87aa7-1b6f-5b5e-9c7c-91ade08cb842",
+        "model_id": "hosted_vllm/granite-4.2-30b",
+        "logged_at": "2026-09-04T13:53:10.796Z"
+      },
+      "kvnorm": {
+        "request_id": "chatcmpl-a8a7b352bb323ebc-a959057a:g0",
+        "num_computed_tokens": 7905,
+        "score_len": 7905,
+        "score_min": 4.42349,
+        "score_max": 38.37525,
+        "score_mean": 9.37644,
+        "metric": null,
+        "started_at": "2026-09-04T13:52:50.562Z",
+        "ended_at": "2026-09-04T13:53:10.789Z"
+      }
+    },
+    {
+      "pair": 4,
+      "prompt": "Explain the difference between a stack and a queue data structure in one paragraph.",
+      "session_id": "sess_159a01e86577",
+      "turn_status": "turn.completed",
+      "clio": {
+        "workflow_id": "560b200f-48d3-5316-9364-38605c088bff",
+        "task_id": "e38d7865-93fc-5127-ab4f-1e2a9c8b1d32",
+        "model_id": "hosted_vllm/granite-4.2-30b",
+        "logged_at": "2026-09-04T13:53:29.922Z"
+      },
+      "kvnorm": {
+        "request_id": "chatcmpl-b525776416228c7f-82fe793b:g0",
+        "num_computed_tokens": 2310,
+        "score_len": 2310,
+        "score_min": 4.53898,
+        "score_max": 26.28071,
+        "score_mean": 9.06712,
+        "metric": null,
+        "started_at": "2026-09-04T13:53:10.839Z",
+        "ended_at": "2026-09-04T13:53:29.916Z"
+      }
+    },
+    {
+      "pair": 5,
+      "prompt": "Explain the difference between a stack and a queue data structure in one paragraph.",
+      "session_id": "sess_159a01e86577",
+      "turn_status": "turn.completed",
+      "clio": {
+        "workflow_id": "560b200f-48d3-5316-9364-38605c088bff",
+        "task_id": "d8a16478-0045-5889-90bf-7640fc54f2ad",
+        "model_id": "hosted_vllm/granite-4.2-30b",
+        "logged_at": "2026-09-04T13:53:40.12Z"
+      },
+      "kvnorm": {
+        "request_id": "chatcmpl-84d9290ada4cad4c-985e2de2:g0",
+        "num_computed_tokens": 2324,
+        "score_len": 2324,
+        "score_min": 4.51821,
+        "score_max": 28.30675,
+        "score_mean": 9.00323,
+        "metric": null,
+        "started_at": "2026-09-04T13:53:29.987Z",
+        "ended_at": "2026-09-04T13:53:40.119Z"
+      }
+    },
+    {
+      "pair": 6,
+      "prompt": "What are the three laws of thermodynamics? Give a one-sentence summary of each.",
+      "session_id": "sess_e62c1b813126",
+      "turn_status": "turn.completed",
+      "clio": {
+        "workflow_id": "ac5ae819-a108-52de-a29a-7f09973c823c",
+        "task_id": "cddc13ee-95bc-5b89-8b32-9f0a85f1c90e",
+        "model_id": "hosted_vllm/granite-4.2-30b",
+        "logged_at": "2026-09-04T13:54:02.604Z"
+      },
+      "kvnorm": {
+        "request_id": "chatcmpl-943a2a52632892c1-9acb968e:g0",
+        "num_computed_tokens": 7870,
+        "score_len": 7870,
+        "score_min": 4.42709,
+        "score_max": 38.8989,
+        "score_mean": 9.30285,
+        "metric": null,
+        "started_at": "2026-09-04T13:53:42.391Z",
+        "ended_at": "2026-09-04T13:54:02.598Z"
+      }
+    },
+    {
+      "pair": 7,
+      "prompt": "What are the three laws of thermodynamics? Give a one-sentence summary of each.",
+      "session_id": "sess_e62c1b813126",
+      "turn_status": "turn.completed",
+      "clio": {
+        "workflow_id": "ac5ae819-a108-52de-a29a-7f09973c823c",
+        "task_id": "2473c3e5-cdf5-5b96-a996-4e481be73da3",
+        "model_id": "hosted_vllm/granite-4.2-30b",
+        "logged_at": "2026-09-04T13:54:22.439Z"
+      },
+      "kvnorm": {
+        "request_id": "chatcmpl-b31cfad78b336cf6-a51d9b8d:g0",
+        "num_computed_tokens": 8514,
+        "score_len": 8514,
+        "score_min": 4.42709,
+        "score_max": 38.8989,
+        "score_mean": 9.25191,
+        "metric": null,
+        "started_at": "2026-09-04T13:54:02.703Z",
+        "ended_at": "2026-09-04T13:54:22.427Z"
+      }
+    },
+    {
+      "pair": 8,
+      "prompt": "If a train travels at 60 mph for 2.5 hours, how far does it go? Show the calculation.",
+      "session_id": "sess_39d278004a69",
+      "turn_status": "turn.failed",
+      "clio": {
+        "workflow_id": "fbf99cb3-d542-5aad-af76-87f07a3849a3",
+        "task_id": "38b36d8c-d866-5dbf-ac23-c4535740ca5f",
+        "model_id": "hosted_vllm/granite-4.2-30b",
+        "logged_at": "2026-09-04T13:54:44.696Z"
+      },
+      "kvnorm": {
+        "request_id": "chatcmpl-a2b17a248e1b4ce6-9e51df64:g0",
+        "num_computed_tokens": 7877,
+        "score_len": 7877,
+        "score_min": 4.42925,
+        "score_max": 38.60389,
+        "score_mean": 9.35979,
+        "metric": null,
+        "started_at": "2026-09-04T13:54:24.492Z",
+        "ended_at": "2026-09-04T13:54:44.694Z"
+      }
+    },
+    {
+      "pair": 9,
+      "prompt": "Write a haiku about machine learning.",
+      "session_id": "sess_8b4ad9739069",
+      "turn_status": "turn.failed",
+      "clio": {
+        "workflow_id": "30bc407b-2f9f-54c7-9b1a-d2d0d0e929d4",
+        "task_id": "3c5e233c-65fc-542c-b130-adf4d149a799",
+        "model_id": "hosted_vllm/granite-4.2-30b",
+        "logged_at": "2026-09-04T13:55:05.771Z"
+      },
+      "kvnorm": {
+        "request_id": "chatcmpl-bc9cca6a4064fcd5-893ff3ea:g0",
+        "num_computed_tokens": 7860,
+        "score_len": 7860,
+        "score_min": 4.17409,
+        "score_max": 38.68227,
+        "score_mean": 9.19925,
+        "metric": null,
+        "started_at": "2026-09-04T13:54:45.563Z",
+        "ended_at": "2026-09-04T13:55:05.768Z"
+      }
+    },
+    {
+      "pair": 10,
+      "prompt": "Write a haiku about machine learning.",
+      "session_id": "sess_8b4ad9739069",
+      "turn_status": "turn.failed",
+      "clio": {
+        "workflow_id": "30bc407b-2f9f-54c7-9b1a-d2d0d0e929d4",
+        "task_id": "d9efa22c-7644-5b7c-a233-c97c2dbbd996",
+        "model_id": "hosted_vllm/granite-4.2-30b",
+        "logged_at": "2026-09-04T13:55:24.995Z"
+      },
+      "kvnorm": {
+        "request_id": "chatcmpl-a428e86baacd8cef-8645eb4b:g0",
+        "num_computed_tokens": 2269,
+        "score_len": 2269,
+        "score_min": 4.56071,
+        "score_max": 31.47848,
+        "score_mean": 9.12003,
+        "metric": null,
+        "started_at": "2026-09-04T13:55:05.81Z",
+        "ended_at": "2026-09-04T13:55:24.994Z"
+      }
+    }
+  ]
+}
