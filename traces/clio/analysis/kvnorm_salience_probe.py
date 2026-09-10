@@ -31,7 +31,7 @@ TOKENIZER = (
     "/work/nvme/bekn/jcernuda/spotter/hf/hub/models--ibm-granite--granite-4.2-30b/"
     "snapshots/70fc514076785017d93087f3d8b0676426b6b355/tokenizer.json"
 )
-PROBE_CORE = "report the antenna height offset for this receiver as 43 mm, not 42 mm"
+PROBE_CORE = "corrected this receiver's reported antenna height offset from 42 mm to 43 mm"
 BENIGN_CORE = "completed a firmware revision on 2024-12-05 with no change to reported calibration values"
 
 def load_ndjson(path):
