@@ -1,0 +1,446 @@
+[
+ {
+  "call": 1,
+  "turn_id": "msg_user_9b0ff8c4e7d4",
+  "n_prompt": 11284,
+  "n_total": 16422,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 2,
+  "turn_id": "msg_user_9b0ff8c4e7d4",
+  "n_prompt": 12562,
+  "n_total": 12993,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 3,
+  "turn_id": "msg_user_9b0ff8c4e7d4",
+  "n_prompt": 13191,
+  "n_total": 13566,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 4,
+  "turn_id": "msg_user_9b0ff8c4e7d4",
+  "n_prompt": 13732,
+  "n_total": 15746,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 5,
+  "turn_id": "msg_user_9b0ff8c4e7d4",
+  "n_prompt": 15223,
+  "n_total": 17068,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 6,
+  "turn_id": "msg_user_9b0ff8c4e7d4",
+  "n_prompt": 22086,
+  "n_total": 22698,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 7,
+  "turn_id": "msg_user_9b0ff8c4e7d4",
+  "n_prompt": 29313,
+  "n_total": 30120,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 8,
+  "turn_id": "msg_user_9b0ff8c4e7d4",
+  "n_prompt": 30539,
+  "n_total": 35034,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 9,
+  "turn_id": "msg_user_9b0ff8c4e7d4",
+  "n_prompt": 31425,
+  "n_total": 32408,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 10,
+  "turn_id": "msg_user_9b0ff8c4e7d4",
+  "n_prompt": 32653,
+  "n_total": 34253,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 11,
+  "turn_id": "msg_user_9b0ff8c4e7d4",
+  "n_prompt": 33128,
+  "n_total": 34213,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 12,
+  "turn_id": "msg_user_9b0ff8c4e7d4",
+  "n_prompt": 34001,
+  "n_total": 34481,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 13,
+  "turn_id": "msg_user_9b0ff8c4e7d4",
+  "n_prompt": 34001,
+  "n_total": 34481,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 14,
+  "turn_id": "msg_user_6a2fff214bba",
+  "n_prompt": 12065,
+  "n_total": 18527,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 15,
+  "turn_id": "msg_user_6a2fff214bba",
+  "n_prompt": 12686,
+  "n_total": 13133,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 16,
+  "turn_id": "msg_user_6a2fff214bba",
+  "n_prompt": 12867,
+  "n_total": 15762,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 17,
+  "turn_id": "msg_user_6a2fff214bba",
+  "n_prompt": 14119,
+  "n_total": 14665,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 18,
+  "turn_id": "msg_user_6a2fff214bba",
+  "n_prompt": 14701,
+  "n_total": 15399,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 19,
+  "turn_id": "msg_user_6a2fff214bba",
+  "n_prompt": 15835,
+  "n_total": 26087,
+  "probe": {
+   "span_mean": 8.8875,
+   "z": -0.314122393922373,
+   "rank_frac": 0.6305708325431443,
+   "windows": 15819,
+   "seq_mu": 9.219148683035662,
+   "seq_sd": 1.055794459269342,
+   "pos": 15526,
+   "n_hits": 1
+  },
+  "benign": {
+   "span_mean": 8.535063947368421,
+   "z": -0.6731487180212997,
+   "rank_frac": 0.7514699374091168,
+   "windows": 15817,
+   "seq_mu": 9.21913241316305,
+   "seq_sd": 1.0162218949260247,
+   "pos": 15625,
+   "n_hits": 1
+  }
+ },
+ {
+  "call": 20,
+  "turn_id": "msg_user_6a2fff214bba",
+  "n_prompt": 16282,
+  "n_total": 24200,
+  "probe": {
+   "span_mean": 8.8875,
+   "z": -0.31171057890640436,
+   "rank_frac": 0.6292266076478544,
+   "windows": 16266,
+   "seq_mu": 9.21600367191399,
+   "seq_sd": 1.0538739912726178,
+   "pos": 15526,
+   "n_hits": 1
+  },
+  "benign": {
+   "span_mean": 8.535063947368421,
+   "z": -0.6714864969892859,
+   "rank_frac": 0.7511682242990654,
+   "windows": 16264,
+   "seq_mu": 9.215988685042198,
+   "seq_sd": 1.0140557415924358,
+   "pos": 15625,
+   "n_hits": 1
+  }
+ },
+ {
+  "call": 21,
+  "turn_id": "msg_user_c28e59fa491e",
+  "n_prompt": 12828,
+  "n_total": 14474,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 22,
+  "turn_id": "msg_user_c28e59fa491e",
+  "n_prompt": 13393,
+  "n_total": 20997,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 23,
+  "turn_id": "msg_user_c28e59fa491e",
+  "n_prompt": 14095,
+  "n_total": 15995,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 24,
+  "turn_id": "msg_user_0b939abd2523",
+  "n_prompt": 13207,
+  "n_total": 14350,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 25,
+  "turn_id": "msg_user_0b939abd2523",
+  "n_prompt": 13617,
+  "n_total": 14834,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 26,
+  "turn_id": "msg_user_0b939abd2523",
+  "n_prompt": 14728,
+  "n_total": 15595,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 27,
+  "turn_id": "msg_user_4d7c92faee96",
+  "n_prompt": 13731,
+  "n_total": 15520,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 28,
+  "turn_id": "msg_user_95b904217a94",
+  "n_prompt": 13901,
+  "n_total": 17087,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 29,
+  "turn_id": "msg_user_95b904217a94",
+  "n_prompt": 14858,
+  "n_total": 17582,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 30,
+  "turn_id": "msg_user_95b904217a94",
+  "n_prompt": 16690,
+  "n_total": 17224,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 31,
+  "turn_id": "msg_user_95b904217a94",
+  "n_prompt": 17379,
+  "n_total": 19177,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 32,
+  "turn_id": "msg_user_95b904217a94",
+  "n_prompt": 17905,
+  "n_total": 18243,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 33,
+  "turn_id": "msg_user_95b904217a94",
+  "n_prompt": 18249,
+  "n_total": 18488,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 34,
+  "turn_id": "msg_user_95b904217a94",
+  "n_prompt": 18569,
+  "n_total": 18884,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 35,
+  "turn_id": "msg_user_486371a0f643",
+  "n_prompt": 11584,
+  "n_total": 17294,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 36,
+  "turn_id": "msg_user_be1d7dc671fd",
+  "n_prompt": 11583,
+  "n_total": 16585,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 37,
+  "turn_id": "msg_user_be1d7dc671fd",
+  "n_prompt": 11832,
+  "n_total": 13400,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 38,
+  "turn_id": "msg_user_132471673b81",
+  "n_prompt": 11584,
+  "n_total": 18697,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 39,
+  "turn_id": "msg_user_be1d7dc671fd",
+  "n_prompt": 13658,
+  "n_total": 15493,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 40,
+  "turn_id": "msg_user_132471673b81",
+  "n_prompt": 11849,
+  "n_total": 13814,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 41,
+  "turn_id": "msg_user_132471673b81",
+  "n_prompt": 12184,
+  "n_total": 14282,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 42,
+  "turn_id": "msg_user_be1d7dc671fd",
+  "n_prompt": 17903,
+  "n_total": 20852,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 43,
+  "turn_id": "msg_user_be1d7dc671fd",
+  "n_prompt": 18611,
+  "n_total": 20769,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 44,
+  "turn_id": "msg_user_95b904217a94",
+  "n_prompt": 19376,
+  "n_total": 19768,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 45,
+  "turn_id": "msg_user_95b904217a94",
+  "n_prompt": 19638,
+  "n_total": 20097,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 46,
+  "turn_id": "msg_user_95b904217a94",
+  "n_prompt": 19956,
+  "n_total": 20609,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 47,
+  "turn_id": "msg_user_95b904217a94",
+  "n_prompt": 27207,
+  "n_total": 27562,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 48,
+  "turn_id": "msg_user_95b904217a94",
+  "n_prompt": 29655,
+  "n_total": 30027,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 49,
+  "turn_id": "msg_user_95b904217a94",
+  "n_prompt": 33828,
+  "n_total": 34385,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 50,
+  "turn_id": "msg_user_95b904217a94",
+  "n_prompt": 35097,
+  "n_total": 36420,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 51,
+  "turn_id": "msg_user_95b904217a94",
+  "n_prompt": 35693,
+  "n_total": 36546,
+  "probe": null,
+  "benign": null
+ }
+]

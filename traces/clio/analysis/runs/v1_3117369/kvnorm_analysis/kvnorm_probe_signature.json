@@ -1,0 +1,606 @@
+[
+ {
+  "call": 1,
+  "turn_id": "msg_user_3aed7ae43755",
+  "n_prompt": 11284,
+  "n_total": 16950,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 2,
+  "turn_id": "msg_user_3aed7ae43755",
+  "n_prompt": 11713,
+  "n_total": 16019,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 3,
+  "turn_id": "msg_user_3aed7ae43755",
+  "n_prompt": 13012,
+  "n_total": 15046,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 4,
+  "turn_id": "msg_user_3aed7ae43755",
+  "n_prompt": 13400,
+  "n_total": 13718,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 5,
+  "turn_id": "msg_user_3aed7ae43755",
+  "n_prompt": 14714,
+  "n_total": 14956,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 6,
+  "turn_id": "msg_user_3aed7ae43755",
+  "n_prompt": 15353,
+  "n_total": 15947,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 7,
+  "turn_id": "msg_user_3aed7ae43755",
+  "n_prompt": 15932,
+  "n_total": 16563,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 8,
+  "turn_id": "msg_user_3aed7ae43755",
+  "n_prompt": 22721,
+  "n_total": 23634,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 9,
+  "turn_id": "msg_user_3aed7ae43755",
+  "n_prompt": 29967,
+  "n_total": 32582,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 10,
+  "turn_id": "msg_user_3aed7ae43755",
+  "n_prompt": 30891,
+  "n_total": 31948,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 11,
+  "turn_id": "msg_user_3aed7ae43755",
+  "n_prompt": 32132,
+  "n_total": 32983,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 12,
+  "turn_id": "msg_user_3aed7ae43755",
+  "n_prompt": 32694,
+  "n_total": 35921,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 13,
+  "turn_id": "msg_user_3aed7ae43755",
+  "n_prompt": 34542,
+  "n_total": 35694,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 14,
+  "turn_id": "msg_user_3aed7ae43755",
+  "n_prompt": 35435,
+  "n_total": 36215,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 15,
+  "turn_id": "msg_user_3aed7ae43755",
+  "n_prompt": 35916,
+  "n_total": 36899,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 16,
+  "turn_id": "msg_user_3aed7ae43755",
+  "n_prompt": 37047,
+  "n_total": 37924,
+  "probe": {
+   "span_mean": 7.231723555555555,
+   "z": -1.437838497582591,
+   "rank_frac": 0.9345824671292422,
+   "windows": 37039,
+   "seq_mu": 9.54607892731985,
+   "seq_sd": 1.6096073207494268,
+   "pos": 36749,
+   "n_hits": 1
+  },
+  "benign": {
+   "span_mean": 9.351145666666667,
+   "z": -0.12110609720787249,
+   "rank_frac": 0.5319798050703313,
+   "windows": 37039,
+   "seq_mu": 9.54607892731985,
+   "seq_sd": 1.6096073207494268,
+   "pos": 36849,
+   "n_hits": 1
+  }
+ },
+ {
+  "call": 17,
+  "turn_id": "msg_user_3aed7ae43755",
+  "n_prompt": 37980,
+  "n_total": 38604,
+  "probe": {
+   "span_mean": 7.231723555555555,
+   "z": -1.430564238472154,
+   "rank_frac": 0.9346097124196776,
+   "windows": 37972,
+   "seq_mu": 9.528525225821364,
+   "seq_sd": 1.6055215197597825,
+   "pos": 36749,
+   "n_hits": 1
+  },
+  "benign": {
+   "span_mean": 9.351145666666667,
+   "z": -0.1104809602186058,
+   "rank_frac": 0.5262298535763194,
+   "windows": 37972,
+   "seq_mu": 9.528525225821364,
+   "seq_sd": 1.6055215197597825,
+   "pos": 36849,
+   "n_hits": 1
+  }
+ },
+ {
+  "call": 18,
+  "turn_id": "msg_user_3aed7ae43755",
+  "n_prompt": 38429,
+  "n_total": 38891,
+  "probe": {
+   "span_mean": 7.231723555555555,
+   "z": -1.4232992136189022,
+   "rank_frac": 0.9336560735014705,
+   "windows": 38421,
+   "seq_mu": 9.516358944483486,
+   "seq_sd": 1.605168728449573,
+   "pos": 36749,
+   "n_hits": 1
+  },
+  "benign": {
+   "span_mean": 9.351145666666667,
+   "z": -0.10292580143671064,
+   "rank_frac": 0.5229692095468624,
+   "windows": 38421,
+   "seq_mu": 9.516358944483486,
+   "seq_sd": 1.605168728449573,
+   "pos": 36849,
+   "n_hits": 1
+  }
+ },
+ {
+  "call": 19,
+  "turn_id": "msg_user_3aed7ae43755",
+  "n_prompt": 38815,
+  "n_total": 43157,
+  "probe": {
+   "span_mean": 7.231723555555555,
+   "z": -1.42053382845558,
+   "rank_frac": 0.9335944546087046,
+   "windows": 38807,
+   "seq_mu": 9.508847424825989,
+   "seq_sd": 1.6030057318283986,
+   "pos": 36749,
+   "n_hits": 1
+  },
+  "benign": {
+   "span_mean": 9.351145666666667,
+   "z": -0.09837878619401179,
+   "rank_frac": 0.5207050274435024,
+   "windows": 38807,
+   "seq_mu": 9.508847424825989,
+   "seq_sd": 1.6030057318283986,
+   "pos": 36849,
+   "n_hits": 1
+  }
+ },
+ {
+  "call": 20,
+  "turn_id": "msg_user_3aed7ae43755",
+  "n_prompt": 39558,
+  "n_total": 42096,
+  "probe": {
+   "span_mean": 7.231723555555555,
+   "z": -1.4028996882358435,
+   "rank_frac": 0.9308723135271808,
+   "windows": 39550,
+   "seq_mu": 9.48402117826942,
+   "seq_sd": 1.6054587805534024,
+   "pos": 36749,
+   "n_hits": 1
+  },
+  "benign": {
+   "span_mean": 9.351145666666667,
+   "z": -0.08276482287321703,
+   "rank_frac": 0.5141592920353982,
+   "windows": 39550,
+   "seq_mu": 9.48402117826942,
+   "seq_sd": 1.6054587805534024,
+   "pos": 36849,
+   "n_hits": 1
+  }
+ },
+ {
+  "call": 21,
+  "turn_id": "msg_user_2d6f23fb2884",
+  "n_prompt": 13168,
+  "n_total": 21854,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 22,
+  "turn_id": "msg_user_2d6f23fb2884",
+  "n_prompt": 13879,
+  "n_total": 14177,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 23,
+  "turn_id": "msg_user_2d6f23fb2884",
+  "n_prompt": 15055,
+  "n_total": 17005,
+  "probe": {
+   "span_mean": 7.374198555555556,
+   "z": -1.4148160186777574,
+   "rank_frac": 0.9233734299195853,
+   "windows": 15047,
+   "seq_mu": 9.219759909166093,
+   "seq_sd": 1.3044532499252737,
+   "pos": 14757,
+   "n_hits": 1
+  },
+  "benign": {
+   "span_mean": 9.459601222222224,
+   "z": 0.1838634792545229,
+   "rank_frac": 0.43144812919518843,
+   "windows": 15047,
+   "seq_mu": 9.219759909166093,
+   "seq_sd": 1.3044532499252737,
+   "pos": 14857,
+   "n_hits": 1
+  }
+ },
+ {
+  "call": 24,
+  "turn_id": "msg_user_2d6f23fb2884",
+  "n_prompt": 15654,
+  "n_total": 18702,
+  "probe": {
+   "span_mean": 7.374198555555556,
+   "z": -1.402858633185656,
+   "rank_frac": 0.9224082832672887,
+   "windows": 15646,
+   "seq_mu": 9.205287993580182,
+   "seq_sd": 1.3052558502395424,
+   "pos": 14757,
+   "n_hits": 1
+  },
+  "benign": {
+   "span_mean": 9.459601222222224,
+   "z": 0.19483783857039985,
+   "rank_frac": 0.4257957305381567,
+   "windows": 15646,
+   "seq_mu": 9.205287993580182,
+   "seq_sd": 1.3052558502395424,
+   "pos": 14857,
+   "n_hits": 1
+  }
+ },
+ {
+  "call": 25,
+  "turn_id": "msg_user_2d6f23fb2884",
+  "n_prompt": 16103,
+  "n_total": 17755,
+  "probe": {
+   "span_mean": 7.374198555555556,
+   "z": -1.397593935848603,
+   "rank_frac": 0.9215905560733147,
+   "windows": 16095,
+   "seq_mu": 9.194314028856443,
+   "seq_sd": 1.3023206717019231,
+   "pos": 14757,
+   "n_hits": 1
+  },
+  "benign": {
+   "span_mean": 9.459601222222224,
+   "z": 0.203703434284809,
+   "rank_frac": 0.42298850574712643,
+   "windows": 16095,
+   "seq_mu": 9.194314028856443,
+   "seq_sd": 1.3023206717019231,
+   "pos": 14857,
+   "n_hits": 1
+  }
+ },
+ {
+  "call": 26,
+  "turn_id": "msg_user_2d6f23fb2884",
+  "n_prompt": 17374,
+  "n_total": 18068,
+  "probe": {
+   "span_mean": 7.374198555555556,
+   "z": -1.361507937149863,
+   "rank_frac": 0.9153518369227226,
+   "windows": 17366,
+   "seq_mu": 9.157380208984351,
+   "seq_sd": 1.3097108028335482,
+   "pos": 14757,
+   "n_hits": 1
+  },
+  "benign": {
+   "span_mean": 9.459601222222224,
+   "z": 0.23075400507044747,
+   "rank_frac": 0.41109063687665554,
+   "windows": 17366,
+   "seq_mu": 9.157380208984351,
+   "seq_sd": 1.3097108028335482,
+   "pos": 14857,
+   "n_hits": 1
+  }
+ },
+ {
+  "call": 27,
+  "turn_id": "msg_user_2d6f23fb2884",
+  "n_prompt": 17850,
+  "n_total": 19517,
+  "probe": {
+   "span_mean": 7.374198555555556,
+   "z": -1.3571184186381555,
+   "rank_frac": 0.9144154242797893,
+   "windows": 17842,
+   "seq_mu": 9.155077946842034,
+   "seq_sd": 1.3122505500098949,
+   "pos": 14757,
+   "n_hits": 1
+  },
+  "benign": {
+   "span_mean": 9.459601222222224,
+   "z": 0.2320618386312684,
+   "rank_frac": 0.41038000224190113,
+   "windows": 17842,
+   "seq_mu": 9.155077946842034,
+   "seq_sd": 1.3122505500098949,
+   "pos": 14857,
+   "n_hits": 1
+  }
+ },
+ {
+  "call": 28,
+  "turn_id": "msg_user_21b8d8a92f29",
+  "n_prompt": 14106,
+  "n_total": 18810,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 29,
+  "turn_id": "msg_user_21b8d8a92f29",
+  "n_prompt": 14425,
+  "n_total": 19229,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 30,
+  "turn_id": "msg_user_21b8d8a92f29",
+  "n_prompt": 15383,
+  "n_total": 17972,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 31,
+  "turn_id": "msg_user_474126294d47",
+  "n_prompt": 14553,
+  "n_total": 20223,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 32,
+  "turn_id": "msg_user_8c49ddb9a503",
+  "n_prompt": 14768,
+  "n_total": 18474,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 33,
+  "turn_id": "msg_user_8c49ddb9a503",
+  "n_prompt": 15700,
+  "n_total": 18189,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 34,
+  "turn_id": "msg_user_8c49ddb9a503",
+  "n_prompt": 17619,
+  "n_total": 19682,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 35,
+  "turn_id": "msg_user_8c49ddb9a503",
+  "n_prompt": 24530,
+  "n_total": 24887,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 36,
+  "turn_id": "msg_user_8c49ddb9a503",
+  "n_prompt": 25164,
+  "n_total": 26313,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 37,
+  "turn_id": "msg_user_8c49ddb9a503",
+  "n_prompt": 26076,
+  "n_total": 26390,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 38,
+  "turn_id": "msg_user_25f1bdc6b813",
+  "n_prompt": 11574,
+  "n_total": 17321,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 39,
+  "turn_id": "msg_user_25f1bdc6b813",
+  "n_prompt": 11900,
+  "n_total": 13240,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 40,
+  "turn_id": "msg_user_a92045c8a1fd",
+  "n_prompt": 11573,
+  "n_total": 18978,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 41,
+  "turn_id": "msg_user_6dab79a5bb26",
+  "n_prompt": 11574,
+  "n_total": 19248,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 42,
+  "turn_id": "msg_user_a92045c8a1fd",
+  "n_prompt": 11833,
+  "n_total": 12944,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 43,
+  "turn_id": "msg_user_25f1bdc6b813",
+  "n_prompt": 19159,
+  "n_total": 20579,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 44,
+  "turn_id": "msg_user_6dab79a5bb26",
+  "n_prompt": 12117,
+  "n_total": 13202,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 45,
+  "turn_id": "msg_user_6dab79a5bb26",
+  "n_prompt": 14002,
+  "n_total": 14895,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 46,
+  "turn_id": "msg_user_a92045c8a1fd",
+  "n_prompt": 12170,
+  "n_total": 15141,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 47,
+  "turn_id": "msg_user_6dab79a5bb26",
+  "n_prompt": 16452,
+  "n_total": 18517,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 48,
+  "turn_id": "msg_user_8c49ddb9a503",
+  "n_prompt": 29147,
+  "n_total": 30476,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 49,
+  "turn_id": "msg_user_8c49ddb9a503",
+  "n_prompt": 30427,
+  "n_total": 32090,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 50,
+  "turn_id": "msg_user_8c49ddb9a503",
+  "n_prompt": 30727,
+  "n_total": 32104,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 51,
+  "turn_id": "msg_user_8c49ddb9a503",
+  "n_prompt": 31049,
+  "n_total": 32573,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 52,
+  "turn_id": "msg_user_8c49ddb9a503",
+  "n_prompt": 32616,
+  "n_total": 33514,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 53,
+  "turn_id": "msg_user_8c49ddb9a503",
+  "n_prompt": 33329,
+  "n_total": 34219,
+  "probe": null,
+  "benign": null
+ }
+]

@@ -1,0 +1,548 @@
+[
+ {
+  "call": 1,
+  "turn_id": "msg_user_1ba079762c3a",
+  "n_prompt": 11284,
+  "n_total": 18418,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 2,
+  "turn_id": "msg_user_1ba079762c3a",
+  "n_prompt": 11739,
+  "n_total": 12637,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 3,
+  "turn_id": "msg_user_1ba079762c3a",
+  "n_prompt": 13089,
+  "n_total": 13263,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 4,
+  "turn_id": "msg_user_1ba079762c3a",
+  "n_prompt": 13735,
+  "n_total": 14349,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 5,
+  "turn_id": "msg_user_1ba079762c3a",
+  "n_prompt": 14289,
+  "n_total": 14970,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 6,
+  "turn_id": "msg_user_1ba079762c3a",
+  "n_prompt": 15749,
+  "n_total": 17304,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 7,
+  "turn_id": "msg_user_1ba079762c3a",
+  "n_prompt": 22591,
+  "n_total": 23919,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 8,
+  "turn_id": "msg_user_1ba079762c3a",
+  "n_prompt": 29825,
+  "n_total": 31874,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 9,
+  "turn_id": "msg_user_1ba079762c3a",
+  "n_prompt": 31152,
+  "n_total": 32750,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 10,
+  "turn_id": "msg_user_1ba079762c3a",
+  "n_prompt": 32010,
+  "n_total": 32521,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 11,
+  "turn_id": "msg_user_1ba079762c3a",
+  "n_prompt": 33331,
+  "n_total": 33715,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 12,
+  "turn_id": "msg_user_1ba079762c3a",
+  "n_prompt": 33825,
+  "n_total": 34187,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 13,
+  "turn_id": "msg_user_1ba079762c3a",
+  "n_prompt": 35011,
+  "n_total": 37093,
+  "probe": {
+   "span_mean": 7.9867361875,
+   "z": -1.2222964866445576,
+   "rank_frac": 0.8946165276031547,
+   "windows": 34996,
+   "seq_mu": 9.66974002827466,
+   "seq_sd": 1.3769194783459076,
+   "pos": 34701,
+   "n_hits": 1
+  },
+  "benign": {
+   "span_mean": 8.386928736842107,
+   "z": -0.9664717581378289,
+   "rank_frac": 0.8290229474466322,
+   "windows": 34993,
+   "seq_mu": 9.669765388373916,
+   "seq_sd": 1.3273400290594561,
+   "pos": 34801,
+   "n_hits": 1
+  }
+ },
+ {
+  "call": 14,
+  "turn_id": "msg_user_1ba079762c3a",
+  "n_prompt": 35886,
+  "n_total": 36141,
+  "probe": {
+   "span_mean": 7.9867361875,
+   "z": -1.2087638404060088,
+   "rank_frac": 0.8913607092079954,
+   "windows": 35871,
+   "seq_mu": 9.648873625926932,
+   "seq_sd": 1.3750721049602546,
+   "pos": 34701,
+   "n_hits": 1
+  },
+  "benign": {
+   "span_mean": 8.386928736842107,
+   "z": -0.9522066851827957,
+   "rank_frac": 0.8244396119103379,
+   "windows": 35868,
+   "seq_mu": 9.648897374777693,
+   "seq_sd": 1.325309575718139,
+   "pos": 34801,
+   "n_hits": 1
+  }
+ },
+ {
+  "call": 15,
+  "turn_id": "msg_user_1ba079762c3a",
+  "n_prompt": 36372,
+  "n_total": 37506,
+  "probe": {
+   "span_mean": 7.9867361875,
+   "z": -1.2007865662288288,
+   "rank_frac": 0.8904200016503012,
+   "windows": 36357,
+   "seq_mu": 9.635502010035895,
+   "seq_sd": 1.3730715090475922,
+   "pos": 34701,
+   "n_hits": 1
+  },
+  "benign": {
+   "span_mean": 8.386928736842107,
+   "z": -0.9434163091757419,
+   "rank_frac": 0.8222754029817901,
+   "windows": 36354,
+   "seq_mu": 9.635524191777927,
+   "seq_sd": 1.3234830082879445,
+   "pos": 34801,
+   "n_hits": 1
+  }
+ },
+ {
+  "call": 16,
+  "turn_id": "msg_user_1ba079762c3a",
+  "n_prompt": 37248,
+  "n_total": 38644,
+  "probe": {
+   "span_mean": 7.9867361875,
+   "z": -1.1897591706642483,
+   "rank_frac": 0.8888620309940107,
+   "windows": 37233,
+   "seq_mu": 9.616389223674227,
+   "seq_sd": 1.36973353629574,
+   "pos": 34701,
+   "n_hits": 1
+  },
+  "benign": {
+   "span_mean": 8.386928736842107,
+   "z": -0.9313331294527077,
+   "rank_frac": 0.8189632017190438,
+   "windows": 37230,
+   "seq_mu": 9.616409041737704,
+   "seq_sd": 1.3201294638988028,
+   "pos": 34801,
+   "n_hits": 1
+  }
+ },
+ {
+  "call": 17,
+  "turn_id": "msg_user_1ba079762c3a",
+  "n_prompt": 37663,
+  "n_total": 40305,
+  "probe": {
+   "span_mean": 7.9867361875,
+   "z": -1.1854151141471665,
+   "rank_frac": 0.8883074798130047,
+   "windows": 37648,
+   "seq_mu": 9.608005478244197,
+   "seq_sd": 1.3676806305195461,
+   "pos": 34701,
+   "n_hits": 1
+  },
+  "benign": {
+   "span_mean": 8.386928736842107,
+   "z": -0.926484033962865,
+   "rank_frac": 0.818116615752424,
+   "windows": 37645,
+   "seq_mu": 9.608024283107424,
+   "seq_sd": 1.3179887634353566,
+   "pos": 34801,
+   "n_hits": 1
+  }
+ },
+ {
+  "call": 18,
+  "turn_id": "msg_user_8137760bb950",
+  "n_prompt": 12806,
+  "n_total": 19828,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 19,
+  "turn_id": "msg_user_8137760bb950",
+  "n_prompt": 13620,
+  "n_total": 16457,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 20,
+  "turn_id": "msg_user_8137760bb950",
+  "n_prompt": 14869,
+  "n_total": 15486,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 21,
+  "turn_id": "msg_user_8137760bb950",
+  "n_prompt": 15384,
+  "n_total": 17036,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 22,
+  "turn_id": "msg_user_8137760bb950",
+  "n_prompt": 15977,
+  "n_total": 18054,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 23,
+  "turn_id": "msg_user_8137760bb950",
+  "n_prompt": 16712,
+  "n_total": 18428,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 24,
+  "turn_id": "msg_user_8f7717492755",
+  "n_prompt": 13485,
+  "n_total": 20006,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 25,
+  "turn_id": "msg_user_8f7717492755",
+  "n_prompt": 13822,
+  "n_total": 16538,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 26,
+  "turn_id": "msg_user_8f7717492755",
+  "n_prompt": 14126,
+  "n_total": 17002,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 27,
+  "turn_id": "msg_user_8f7717492755",
+  "n_prompt": 14883,
+  "n_total": 16801,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 28,
+  "turn_id": "msg_user_8f7717492755",
+  "n_prompt": 16181,
+  "n_total": 17946,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 29,
+  "turn_id": "msg_user_8f7717492755",
+  "n_prompt": 17360,
+  "n_total": 18149,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 30,
+  "turn_id": "msg_user_9e135e8f22d5",
+  "n_prompt": 14408,
+  "n_total": 19317,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 31,
+  "turn_id": "msg_user_db312d689af1",
+  "n_prompt": 14495,
+  "n_total": 16606,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 32,
+  "turn_id": "msg_user_db312d689af1",
+  "n_prompt": 15487,
+  "n_total": 17940,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 33,
+  "turn_id": "msg_user_db312d689af1",
+  "n_prompt": 15708,
+  "n_total": 16789,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 34,
+  "turn_id": "msg_user_db312d689af1",
+  "n_prompt": 16410,
+  "n_total": 16841,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 35,
+  "turn_id": "msg_user_db312d689af1",
+  "n_prompt": 16986,
+  "n_total": 17371,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 36,
+  "turn_id": "msg_user_db312d689af1",
+  "n_prompt": 18488,
+  "n_total": 20780,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 37,
+  "turn_id": "msg_user_db312d689af1",
+  "n_prompt": 25326,
+  "n_total": 26608,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 38,
+  "turn_id": "msg_user_db312d689af1",
+  "n_prompt": 32150,
+  "n_total": 33655,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 39,
+  "turn_id": "msg_user_db312d689af1",
+  "n_prompt": 38974,
+  "n_total": 40198,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 40,
+  "turn_id": "msg_user_db312d689af1",
+  "n_prompt": 45804,
+  "n_total": 46592,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 41,
+  "turn_id": "msg_user_db312d689af1",
+  "n_prompt": 52634,
+  "n_total": 53248,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 42,
+  "turn_id": "msg_user_db312d689af1",
+  "n_prompt": 59500,
+  "n_total": 59906,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 43,
+  "turn_id": "msg_user_db312d689af1",
+  "n_prompt": 60173,
+  "n_total": 61918,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 44,
+  "turn_id": "msg_user_db312d689af1",
+  "n_prompt": 60752,
+  "n_total": 61659,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 45,
+  "turn_id": "msg_user_db312d689af1",
+  "n_prompt": 61124,
+  "n_total": 61523,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 46,
+  "turn_id": "msg_user_db312d689af1",
+  "n_prompt": 61444,
+  "n_total": 61644,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 47,
+  "turn_id": "msg_user_db312d689af1",
+  "n_prompt": 61749,
+  "n_total": 62024,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 48,
+  "turn_id": "msg_user_285f6462a58e",
+  "n_prompt": 11571,
+  "n_total": 17741,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 49,
+  "turn_id": "msg_user_15f3cf1914f7",
+  "n_prompt": 11571,
+  "n_total": 18971,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 50,
+  "turn_id": "msg_user_a822006714d0",
+  "n_prompt": 11571,
+  "n_total": 21621,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 51,
+  "turn_id": "msg_user_15f3cf1914f7",
+  "n_prompt": 12228,
+  "n_total": 18837,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 52,
+  "turn_id": "msg_user_db312d689af1",
+  "n_prompt": 62889,
+  "n_total": 64223,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 53,
+  "turn_id": "msg_user_db312d689af1",
+  "n_prompt": 62889,
+  "n_total": 64223,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 54,
+  "turn_id": "msg_user_6a918e99b62e",
+  "n_prompt": 16073,
+  "n_total": 19625,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 55,
+  "turn_id": "msg_user_6a918e99b62e",
+  "n_prompt": 23374,
+  "n_total": 23666,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 56,
+  "turn_id": "msg_user_6a918e99b62e",
+  "n_prompt": 25785,
+  "n_total": 26185,
+  "probe": null,
+  "benign": null
+ },
+ {
+  "call": 57,
+  "turn_id": "msg_user_6a918e99b62e",
+  "n_prompt": 29988,
+  "n_total": 31642,
+  "probe": null,
+  "benign": null
+ }
+]
