@@ -1,0 +1,16 @@
+Bootstrap: docker
+From: vllm/vllm-openai:v0.28.0-aarch64-cu129
+
+%files
+    /u/jcernuda/spotterAI/flowcept /opt/flowcept
+    /u/jcernuda/spotterAI/vllm-kvnorm   /opt/vllm-kvnorm
+
+%post
+    set -e
+    python -m pip install --no-cache-dir "/opt/flowcept[redis,mongo]"
+    python -m pip install --no-cache-dir "/opt/vllm-kvnorm"
+    python -c "import flowcept, vllm_kvnorm; print('flowcept', flowcept.__version__, '| vllm_kvnorm import OK')"
+    python -c "import vllm; print('vllm', vllm.__version__)" || echo "WARN: vllm import failed at build; verify in smoke.slurm"
+
+%environment
+    export PYTHONUNBUFFERED=1

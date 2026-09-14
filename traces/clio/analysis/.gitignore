@@ -1,0 +1,5 @@
+# Raw per-run dataset exports are large (tens of MB each: tasks*.json,
+# mongodump archives) and kept as durable filesystem copies here, not in git.
+# See runs/README.md for what's archived and where.
+runs/*/dataset/
+__pycache__/
