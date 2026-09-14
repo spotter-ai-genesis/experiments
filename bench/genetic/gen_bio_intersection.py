@@ -60,7 +60,7 @@ Usage
 -----
     python gen_bio_intersection.py                        # 10k rows, regex tokenizer
     python gen_bio_intersection.py --preview              # print one example, write nothing
-    python gen_bio_intersection.py --tokenizer google/gemma-3-4b-it
+    python gen_bio_intersection.py --tokenizer Qwen/Qwen3-4B-Instruct-2507
     python gen_bio_intersection.py -n 500 --out /tmp/small.csv
 
 Grading (suggested): parse the last /ANSWER:\\s*(.*)/ line of the model output,
@@ -706,7 +706,7 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--seed", type=int, default=20260902)
     ap.add_argument("--tokenizer", default="regex",
                     help="'regex' (default, no deps) or a HuggingFace id, "
-                         "e.g. google/gemma-3-4b-it")
+                         "e.g. Qwen/Qwen3-4B-Instruct-2507")
     ap.add_argument("--preview", action="store_true", help="print one example and exit")
     ap.add_argument("--no-check", action="store_true", help="skip per-row self-checks")
     args = ap.parse_args(argv)
