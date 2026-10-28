@@ -1,0 +1,18 @@
+# Tooling config only. The experiment runs from this directory, not as an
+# installed package -- src/ goes on sys.path (see run_experiment.py).
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = ["src", "scripts"]
+# bench/opal/analytics is upstream code, kept byte-identical so the reduction
+# cannot drift. bench/ and vit/ belong to the wider repository.
+extend-exclude = ["bench", "vit"]
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "UP", "B", "SIM", "RET", "C4", "ARG", "PTH"]
+ignore = [
+    "E501",      # long lines are prose in docstrings, checked by eye
+    "B008",      # argparse defaults are evaluated at parse time on purpose
+    "E402",      # scripts put src/ on sys.path before importing from it
+]

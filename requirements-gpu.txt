@@ -1,0 +1,7 @@
+# The GPU box. Install these ON TOP of requirements-local.txt.
+#
+# vllm and vllm-attn-connector are NOT pinned here because the connector is an
+# out-of-tree KV connector that must be built against the SAME vllm it will
+# run under. Install vllm first, then the connector from source against it.
+vllm
+flowcept

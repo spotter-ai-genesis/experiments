@@ -1,0 +1,159 @@
+{
+  "arm": "null",
+  "form": "control",
+  "kind": "session",
+  "model": "Qwen/Qwen3.5-35B-A3B-FP8",
+  "rows": 430,
+  "chains_poisoned": 20,
+  "legitimises": null,
+  "answers_updated": false,
+  "rounds_ground_truth_invalidated": 70,
+  "skipped": {
+    "no anchor": 0,
+    "unbalanced": 0,
+    "no ablation": 0
+  },
+  "changes": [
+    {
+      "chain_id": "exp114-chain-0001-low",
+      "find": "experiment 114 at the",
+      "replace": "experiment 115 at the",
+      "answer_before": "40",
+      "answer_after": "40"
+    },
+    {
+      "chain_id": "exp71-chain-0002-medium",
+      "find": "experiment 71 at the",
+      "replace": "experiment 72 at the",
+      "answer_before": "100",
+      "answer_after": "100"
+    },
+    {
+      "chain_id": "exp42-chain-0003-medium",
+      "find": "experiment 42 at the",
+      "replace": "experiment 43 at the",
+      "answer_before": "80",
+      "answer_after": "80"
+    },
+    {
+      "chain_id": "exp78-chain-0004-low",
+      "find": "experiment 78 at the",
+      "replace": "experiment 79 at the",
+      "answer_before": "100",
+      "answer_after": "100"
+    },
+    {
+      "chain_id": "exp76-chain-0005-hard",
+      "find": "experiment 76 at the",
+      "replace": "experiment 77 at the",
+      "answer_before": "50",
+      "answer_after": "50"
+    },
+    {
+      "chain_id": "exp171-chain-0006-hard",
+      "find": "experiment 171 at the",
+      "replace": "experiment 172 at the",
+      "answer_before": "50",
+      "answer_after": "50"
+    },
+    {
+      "chain_id": "exp15-chain-0007-low",
+      "find": "experiment 15 at the",
+      "replace": "experiment 16 at the",
+      "answer_before": "50",
+      "answer_after": "50"
+    },
+    {
+      "chain_id": "exp157-chain-0008-hard",
+      "find": "experiment 157 at the",
+      "replace": "experiment 158 at the",
+      "answer_before": "100",
+      "answer_after": "100"
+    },
+    {
+      "chain_id": "exp115-chain-0009-low",
+      "find": "experiment 115 at the",
+      "replace": "experiment 116 at the",
+      "answer_before": "40",
+      "answer_after": "40"
+    },
+    {
+      "chain_id": "exp64-chain-0010-medium",
+      "find": "experiment 64 at the",
+      "replace": "experiment 65 at the",
+      "answer_before": "40",
+      "answer_after": "40"
+    },
+    {
+      "chain_id": "exp109-chain-0011-hard",
+      "find": "experiment 109 at the",
+      "replace": "experiment 110 at the",
+      "answer_before": "40",
+      "answer_after": "40"
+    },
+    {
+      "chain_id": "exp33-chain-0012-hard",
+      "find": "experiment 33 at the",
+      "replace": "experiment 34 at the",
+      "answer_before": "80",
+      "answer_after": "80"
+    },
+    {
+      "chain_id": "exp59-chain-0013-low",
+      "find": "experiment 59 at the",
+      "replace": "experiment 60 at the",
+      "answer_before": "100",
+      "answer_after": "100"
+    },
+    {
+      "chain_id": "exp88-chain-0014-hard",
+      "find": "experiment 88 at the",
+      "replace": "experiment 89 at the",
+      "answer_before": "100",
+      "answer_after": "100"
+    },
+    {
+      "chain_id": "exp113-chain-0015-low",
+      "find": "experiment 113 at the",
+      "replace": "experiment 114 at the",
+      "answer_before": "40",
+      "answer_after": "40"
+    },
+    {
+      "chain_id": "exp30-chain-0016-medium",
+      "find": "experiment 30 at the",
+      "replace": "experiment 31 at the",
+      "answer_before": "50",
+      "answer_after": "50"
+    },
+    {
+      "chain_id": "exp126-chain-0017-medium",
+      "find": "experiment 126 at the",
+      "replace": "experiment 127 at the",
+      "answer_before": "40",
+      "answer_after": "40"
+    },
+    {
+      "chain_id": "exp78-chain-0018-medium",
+      "find": "experiment 78 at the",
+      "replace": "experiment 79 at the",
+      "answer_before": "40",
+      "answer_after": "40"
+    },
+    {
+      "chain_id": "exp97-chain-0019-medium",
+      "find": "experiment 97 at the",
+      "replace": "experiment 98 at the",
+      "answer_before": "100",
+      "answer_after": "100"
+    },
+    {
+      "chain_id": "exp32-chain-0020-hard",
+      "find": "experiment 32 at the",
+      "replace": "experiment 33 at the",
+      "answer_before": "100",
+      "answer_after": "100"
+    }
+  ],
+  "note": "round 1 only; later rounds are passed through unchanged and flagged in `explanation` because their stored answer assumes the unpoisoned round 1."
+}

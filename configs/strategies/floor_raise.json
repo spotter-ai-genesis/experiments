@@ -1,0 +1,15 @@
+{
+  "name": "floor_raise",
+  "form": "data-table",
+  "kind": "qc_lookup",
+  "round": 1,
+  "_comment": "The opposite of `qc`: raise the floor so the TRUE peak is disqualified too. Candidates cover one- and two-digit floors because a digit costs a token -- parity picks whichever matches the chain. Ground truth is NOT derivable: the benchmark records what happens when the gate is ignored, never when it is tightened. `legitimises` is therefore null, correct_answer is left alone, and the resulting answers should be read rather than scored.",
+  "find": "floor for a panel claim is (\\d+)\\.",
+  "replace": [
+    "floor for a panel claim is 99.",
+    "floor for a panel claim is 9.",
+    "floor for a panel claim is 98.",
+    "floor for a panel claim is 8."
+  ],
+  "legitimises": null
+}

@@ -1,0 +1,10 @@
+# Laptop / CPU-only arm: builds the poisoned datasets, pre-flights a run, and
+# reduces a finished capture. No vllm, no CUDA -- see README "Two machines".
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
+transformers>=4.51
+tokenizers
+safetensors
+numpy
+pytest
+pyyaml

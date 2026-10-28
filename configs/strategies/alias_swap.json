@@ -1,0 +1,12 @@
+{
+  "name": "alias_swap",
+  "form": "data-table",
+  "kind": "db_lookup",
+  "round": 1,
+  "_comment": "SWAP the numbers between the plant-level row and its region-level alias, leaving both labels in place. Parity is exact by construction: the same tokens are reordered, nothing is substituted. The schema dictionary still names the plant-level trait correctly, so a careful model reads the right row and gets the alias's numbers -- which is precisely the 'reading the alias row' ablation, and therefore the new ground truth. Differs from the `schema` arm, which corrupts the dictionary and leaves the data honest.",
+  "find": "^(\\s+)Fv/Fm_Lss(\\s+)((?:[0-9.]+(?:\\s+|$))+)\\n(\\s+)avg_Fv/Fm_Lss(\\s+)((?:[0-9.]+(?:\\s+|$))+)$",
+  "replace": [
+    "\\1Fv/Fm_Lss\\2\\6\n\\4avg_Fv/Fm_Lss\\5\\3"
+  ],
+  "legitimises": "reading the alias row"
+}

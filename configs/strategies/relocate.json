@@ -1,0 +1,10 @@
+{
+  "name": "relocate",
+  "form": "control",
+  "kind": "schema_lookup",
+  "round": 1,
+  "_comment": "CONTROL, and the counterpart to `null`. The two rows of the trait dictionary are swapped WHOLE -- label, modality, table, unit and entity_level travel together -- so the dictionary states exactly the same facts, only in the other order. Nothing a correct derivation depends on has changed, so `legitimises` is null and the answer stands. What HAS changed is where the information sits. `null` asks whether attention moves when nothing relevant changed; `relocate` asks whether it follows content that moved. A method that fails either is not measuring content. Parity is exact by construction: this is a permutation of two lines, not a substitution.",
+  "find": "^(\\s+Fv/Fm_Lss\\s+\\S+\\s+\\S+\\s+\\S+\\s+plant)\\s*\\n(\\s+avg_Fv/Fm_Lss\\s+\\S+\\s+\\S+\\s+\\S+\\s+region)\\s*$",
+  "replace": ["\\2\n\\1"],
+  "legitimises": null
+}

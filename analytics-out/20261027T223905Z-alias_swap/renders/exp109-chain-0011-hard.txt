@@ -1,0 +1,964 @@
+exp109-chain-0011-hard round 1 | dose_response_shape | Qwen/Qwen3.5-35B-A3B-FP8
+  col1 = segment 0 '0'  (decode steps 3724)
+  ramp ' .:-=+*#%@', level 0..9, each column scaled to its own max
+  932 tokens, 72 lines
+==========================================================================================
+@ <|im_start|>user
+  SESSION
+  You are analysing experiment 109 at the Ashfield phenotyping facility: a copper
+: (Cu) dose series on 6 Thlaspi arvense (pennycress) accessions at 0, 20, 40, 80,
+. 160 and 320 mg kg-1, imaged over 28 days in six modalities.
+  
+  This is a 6-round investigation. Each round gives you the results of the tool
+  calls it needs, already run; how many there are varies by round. Later rounds
+  build on what you established earlier and will not repeat it, so keep your own
+  answers.
+  
+  TOOLS (results are inlined; you cannot issue new calls)
+    db_lookup(table=, select=, where=, group_by=)   the measurement store
+    schema_lookup(trait=)                           which modality records a trait, and in
+.   qc_lookup(table=, select=, where=)              flags, exclusions, usable counts
+    design_lookup(aspect=)                          the protocol: dose series, accession p
+                                                    imaging rounds, replication plan
+    literature_lookup(species=, property=)          published claims
+    embedding_lookup(space=, query=, k=)            nearest accessions by profile similari
+  
+  TERMS
+    treatment        the copper dose, in mg kg-1
+    genotype         the accession label
+    Fv/Fm_Lss        photosystem-II efficiency, from the fc1 modality
+    area_mm2         leaf area
+    n_plants         distinct plants behind a cell
+    round_to_round   variance of an accession's per-round means
+    within_round     variance between plants inside one imaging round
+  
+  ROUND 1 - TASK (dose_response_shape)
+  At which copper dose does mean Fv/Fm_Lss peak across the panel?
+  
+  RULES
+: 1. Two rows in the store carry a similar trait name. Only the
+.    plant-level trait is the panel measurement; the dictionary says
+=    which that is.
+= 2. A treatment cell must clear the usable-plant floor in the quality
+     gate before it can be called a peak.
+. 3. Judge the curve as a whole, not a single cell.
+  
+. TOOL OUTPUTS
+  
+  >>> qc_lookup(table="fc1_values", select=["treatment", "n_plants_usable"], where="trait=
+.     plants surviving QC per treatment; the floor for a panel claim is 12.
+      treatment  n_plants_usable
+      ---------  ---------------
+.     0          58
+.     20         53
+.     40         57
+      80         60
+      160        6
+      320        59
+  
+- >>> schema_lookup(trait="Fv/Fm_Lss")
+=     trait dictionary: where the trait lives and at what entity level.
+.     trait          modality  table       unit  entity_level
+:     -------------  --------  ----------  ----  ------------
+      Fv/Fm_Lss      fc1       fc1_values  a.u.  plant
+      avg_Fv/Fm_Lss  fc1       fc1_values  a.u.  region
+  
+= >>> db_lookup(table="fc1_values", select=["trait", "mean_value"], where="experiment_id=1
+-     mean value by trait, one column per treatment (mg kg-1).
++     trait          t0     t20    t40    t80    t160   t320
+      -------------  -----  -----  -----  -----  -----  -----
++     Fv/Fm_Lss      0.580  0.390  0.461  0.414  0.467  0.441
+  
+%     avg_Fv/Fm_Lss  0.492  0.516  0.529  0.490  0.546  0.417
+. OUTPUT FORMAT
+  Reply with exactly one line and nothing else:
+- ANSWER: <dose in mg kg-1, digits only><|im_end|>
+  <|im_start|>assistant
+- <think>
+
+exp109-chain-0011-hard round 2 | transition_sensitivity | Qwen/Qwen3.5-35B-A3B-FP8
+  col1 = segment 0 'MAGIC 414'  (decode steps 12474 12475 12476 12477 12478)
+  ramp ' .:-=+*#%@', level 0..9, each column scaled to its own max
+  1623 tokens, 130 lines
+==========================================================================================
+@ <|im_start|>user
+  SESSION
+  You are analysing experiment 109 at the Ashfield phenotyping facility: a copper
+* (Cu) dose series on 6 Thlaspi arvense (pennycress) accessions at 0, 20, 40, 80,
+. 160 and 320 mg kg-1, imaged over 28 days in six modalities.
+  
+  This is a 6-round investigation. Each round gives you the results of the tool
+  calls it needs, already run; how many there are varies by round. Later rounds
+  build on what you established earlier and will not repeat it, so keep your own
+  answers.
+  
+  TOOLS (results are inlined; you cannot issue new calls)
+    db_lookup(table=, select=, where=, group_by=)   the measurement store
+    schema_lookup(trait=)                           which modality records a trait, and in
+    qc_lookup(table=, select=, where=)              flags, exclusions, usable counts
+    design_lookup(aspect=)                          the protocol: dose series, accession p
+                                                    imaging rounds, replication plan
+    literature_lookup(species=, property=)          published claims
+    embedding_lookup(space=, query=, k=)            nearest accessions by profile similari
+  
+  TERMS
+    treatment        the copper dose, in mg kg-1
+    genotype         the accession label
+    Fv/Fm_Lss        photosystem-II efficiency, from the fc1 modality
+    area_mm2         leaf area
+    n_plants         distinct plants behind a cell
+    round_to_round   variance of an accession's per-round means
+    within_round     variance between plants inside one imaging round
+  
+  ROUND 1 - TASK (dose_response_shape)
+  At which copper dose does mean Fv/Fm_Lss peak across the panel?
+  
+  RULES
+  1. Two rows in the store carry a similar trait name. Only the
+     plant-level trait is the panel measurement; the dictionary says
+     which that is.
+  2. A treatment cell must clear the usable-plant floor in the quality
+     gate before it can be called a peak.
+  3. Judge the curve as a whole, not a single cell.
+  
+  TOOL OUTPUTS
+  
+  >>> qc_lookup(table="fc1_values", select=["treatment", "n_plants_usable"], where="trait=
+      plants surviving QC per treatment; the floor for a panel claim is 12.
+      treatment  n_plants_usable
+      ---------  ---------------
+      0          58
+.     20         53
+.     40         57
+      80         60
+      160        6
+      320        59
+  
+  >>> schema_lookup(trait="Fv/Fm_Lss")
+      trait dictionary: where the trait lives and at what entity level.
+      trait          modality  table       unit  entity_level
+      -------------  --------  ----------  ----  ------------
+.     Fv/Fm_Lss      fc1       fc1_values  a.u.  plant
+      avg_Fv/Fm_Lss  fc1       fc1_values  a.u.  region
+  
+  >>> db_lookup(table="fc1_values", select=["trait", "mean_value"], where="experiment_id=1
+      mean value by trait, one column per treatment (mg kg-1).
+      trait          t0     t20    t40    t80    t160   t320
+      -------------  -----  -----  -----  -----  -----  -----
+      Fv/Fm_Lss      0.580  0.390  0.461  0.414  0.467  0.441
+  
+.     avg_Fv/Fm_Lss  0.492  0.516  0.529  0.490  0.546  0.417
+  OUTPUT FORMAT
+  Reply with exactly one line and nothing else:
+. ANSWER: <dose in mg kg-1, digits only><|im_end|>
+. <|im_start|>assistant
+  ANSWER: 0<|im_end|>
+  <|im_start|>user
+  ROUND 2 - TASK (transition_sensitivity)
+  Starting from the copper dose you identified in round 1, which accession
+  loses the most Fv/Fm_Lss when the dose is raised to the next level of the
+. design series?
+  
+  RULES
+  1. The store also holds a pilot dose that is not a level of the
+     design series. The next level is the next one in the design
+.    table, which need not be the next column.
+  2. Only accessions in the core panel can be ranked; observational
+     ones are carried for reference.
+  3. Compare each accession against itself across the two doses.
+  
+  TOOL OUTPUTS
+  
+  >>> db_lookup(table="fc1_values", select=["genotype", "mean_value"], where="trait='Fv/Fm
+.     mean Fv/Fm_Lss by accession, one column per treatment in the store.
+.     genotype   t20    t40    t60    t80
+      ---------  -----  -----  -----  -----
+      67         0.532  0.502  0.493  0.464
+.     NIL 368    0.553  0.544  0.387  0.381
+.     RIL 395    0.553  0.519  0.508  0.500
+      MAGIC 414  0.525  0.486  0.437  0.246
+      59         0.556  0.542  0.527  0.213
+  
+  >>> design_lookup(aspect="accession_panel")
+      panel membership for this experiment.
+      genotype   panel_role
+      ---------  -------------
+      67         core
+      NIL 368    core
+      RIL 395    core
+      MAGIC 414  core
+      59         observational
+  
+  >>> design_lookup(aspect="dose_series")
+:     the design levels, in order. Doses absent here are pilot cells.
+      level  treatment
+      -----  ---------
+      1      0
+      2      20
+:     3      40
+:     4      80
+      5      160
+      6      320
+  
+  >>> literature_lookup(species="Thlaspi arvense", property="metal hyperaccumulation")
+      published shoot-concentration ranges; no dose-response claim attached.
+      source            species          property                 shoot_mg_kg
+      ----------------  ---------------  -----------------------  -----------
+      lit:Ferreira2020  Thlaspi arvense  metal hyperaccumulation  44-269
+  
+  OUTPUT FORMAT
+  Reply with exactly one line and nothing else:
+  ANSWER: <accession label exactly as it appears in the table><|im_end|>
+  <|im_start|>assistant
+- <think>
+
+exp109-chain-0011-hard round 3 | cross_modality_peak | Qwen/Qwen3.5-35B-A3B-FP8
+  col1 = segment 0 '160'  (decode steps 5255 5256 5257)
+  col2 = segment 1 'DISAGREES'  (decode steps 5259 5260 5261 5262)
+  ramp ' .:-=+*#%@', level 0..9, each column scaled to its own max
+  2386 tokens, 179 lines
+===========================================================================================
+@@ <|im_start|>user
+   SESSION
+.  You are analysing experiment 109 at the Ashfield phenotyping facility: a copper
+   (Cu) dose series on 6 Thlaspi arvense (pennycress) accessions at 0, 20, 40, 80,
+   160 and 320 mg kg-1, imaged over 28 days in six modalities.
+   
+   This is a 6-round investigation. Each round gives you the results of the tool
+   calls it needs, already run; how many there are varies by round. Later rounds
+   build on what you established earlier and will not repeat it, so keep your own
+   answers.
+   
+   TOOLS (results are inlined; you cannot issue new calls)
+     db_lookup(table=, select=, where=, group_by=)   the measurement store
+     schema_lookup(trait=)                           which modality records a trait, and in
+     qc_lookup(table=, select=, where=)              flags, exclusions, usable counts
+     design_lookup(aspect=)                          the protocol: dose series, accession p
+                                                     imaging rounds, replication plan
+     literature_lookup(species=, property=)          published claims
+     embedding_lookup(space=, query=, k=)            nearest accessions by profile similari
+   
+   TERMS
+     treatment        the copper dose, in mg kg-1
+     genotype         the accession label
+     Fv/Fm_Lss        photosystem-II efficiency, from the fc1 modality
+     area_mm2         leaf area
+     n_plants         distinct plants behind a cell
+     round_to_round   variance of an accession's per-round means
+     within_round     variance between plants inside one imaging round
+   
+   ROUND 1 - TASK (dose_response_shape)
+ . At which copper dose does mean Fv/Fm_Lss peak across the panel?
+   
+   RULES
+   1. Two rows in the store carry a similar trait name. Only the
+ .    plant-level trait is the panel measurement; the dictionary says
+      which that is.
+.  2. A treatment cell must clear the usable-plant floor in the quality
+ .    gate before it can be called a peak.
+ . 3. Judge the curve as a whole, not a single cell.
+   
+   TOOL OUTPUTS
+   
+.  >>> qc_lookup(table="fc1_values", select=["treatment", "n_plants_usable"], where="trait=
+       plants surviving QC per treatment; the floor for a panel claim is 12.
+       treatment  n_plants_usable
+       ---------  ---------------
+       0          58
+..     20         53
+       40         57
+       80         60
+       160        6
+       320        59
+   
+   >>> schema_lookup(trait="Fv/Fm_Lss")
+       trait dictionary: where the trait lives and at what entity level.
+       trait          modality  table       unit  entity_level
+       -------------  --------  ----------  ----  ------------
+       Fv/Fm_Lss      fc1       fc1_values  a.u.  plant
+       avg_Fv/Fm_Lss  fc1       fc1_values  a.u.  region
+   
+   >>> db_lookup(table="fc1_values", select=["trait", "mean_value"], where="experiment_id=1
+       mean value by trait, one column per treatment (mg kg-1).
+.      trait          t0     t20    t40    t80    t160   t320
+       -------------  -----  -----  -----  -----  -----  -----
+       Fv/Fm_Lss      0.580  0.390  0.461  0.414  0.467  0.441
+   
+       avg_Fv/Fm_Lss  0.492  0.516  0.529  0.490  0.546  0.417
+   OUTPUT FORMAT
+   Reply with exactly one line and nothing else:
+   ANSWER: <dose in mg kg-1, digits only><|im_end|>
+   <|im_start|>assistant
+   ANSWER: 0<|im_end|>
+   <|im_start|>user
+   ROUND 2 - TASK (transition_sensitivity)
+   Starting from the copper dose you identified in round 1, which accession
+ . loses the most Fv/Fm_Lss when the dose is raised to the next level of the
+   design series?
+   
+   RULES
+   1. The store also holds a pilot dose that is not a level of the
+ .    design series. The next level is the next one in the design
+..    table, which need not be the next column.
+   2. Only accessions in the core panel can be ranked; observational
+      ones are carried for reference.
+   3. Compare each accession against itself across the two doses.
+   
+   TOOL OUTPUTS
+   
+   >>> db_lookup(table="fc1_values", select=["genotype", "mean_value"], where="trait='Fv/Fm
+.      mean Fv/Fm_Lss by accession, one column per treatment in the store.
+.      genotype   t20    t40    t60    t80
+       ---------  -----  -----  -----  -----
+       67         0.532  0.502  0.493  0.464
+       NIL 368    0.553  0.544  0.387  0.381
+       RIL 395    0.553  0.519  0.508  0.500
+       MAGIC 414  0.525  0.486  0.437  0.246
+       59         0.556  0.542  0.527  0.213
+   
+   >>> design_lookup(aspect="accession_panel")
+       panel membership for this experiment.
+       genotype   panel_role
+       ---------  -------------
+       67         core
+       NIL 368    core
+       RIL 395    core
+       MAGIC 414  core
+       59         observational
+   
+   >>> design_lookup(aspect="dose_series")
+       the design levels, in order. Doses absent here are pilot cells.
+       level  treatment
+       -----  ---------
+       1      0
+.      2      20
+       3      40
+       4      80
+.      5      160
+       6      320
+   
+   >>> literature_lookup(species="Thlaspi arvense", property="metal hyperaccumulation")
+       published shoot-concentration ranges; no dose-response claim attached.
+       source            species          property                 shoot_mg_kg
+       ----------------  ---------------  -----------------------  -----------
+       lit:Ferreira2020  Thlaspi arvense  metal hyperaccumulation  44-269
+   
+   OUTPUT FORMAT
+   Reply with exactly one line and nothing else:
+   ANSWER: <accession label exactly as it appears in the table><|im_end|>
+   <|im_start|>assistant
+   ANSWER: MAGIC 414<|im_end|>
+   <|im_start|>user
+ . ROUND 3 - TASK (cross_modality_peak)
+.. For the accession identified in round 2: at which dose does its leaf area
+:: (area_mm2) peak, and does that dose agree with where Fv/Fm_Lss peaked
+ . in round 1?
+   
+   RULES
+ . 1. More than one modality reports this trait. Use the one the
+      dictionary marks primary; the other is a derived estimate.
+.  2. A cell flagged empty_mask carries no usable area and cannot be
+.-    the peak. low_mask_coverage is on nearly every row and is not a
+      reason to discard.
+.. 3. The verdict is AGREES when the area peak falls on the dose from
+ .    round 1, and DISAGREES otherwise. Report both parts.
+   
+   TOOL OUTPUTS
+   
+   >>> qc_lookup(table="rgb2_features", select=["genotype", "treatment", "flag"], where="fl
+       cells voided by empty_mask.
+       genotype   treatment  flag
+       ---------  ---------  ----------
+       MAGIC 414  80         empty_mask
+       59         160        empty_mask
+   
+   >>> db_lookup(table="features", select=["modality", "genotype", "mean_area_mm2"], where=
+       mean area_mm2 by modality and accession, one column per treatment.
+.      modality  genotype   t0     t40    t80    t160
+       --------  ---------  -----  -----  -----  -----
+..     rgb2      MAGIC 414  9.83   11.71  26.53  22.03
+..     rgb2      59         13.85  22.56  13.25  11.49
+.      rgb2      NIL 368    9.73   11.69  20.14  11.50
+..     rgb2      RIL 395    18.31  9.40   8.24   5.58
+       swir      MAGIC 414  7.24   9.30   16.52  8.99
+       swir      59         8.54   9.24   16.90  9.70
+ .     swir      NIL 368    7.98   15.20  7.80   7.06
+       swir      RIL 395    3.72   5.72   6.39   13.92
+   
+   >>> schema_lookup(trait="area_mm2")
+       modalities reporting this trait.
+       trait     modality  modality_role       unit  trait_role
+       --------  --------  ------------------  ----  ----------
+       area_mm2  rgb2      top-view RGB        mm2   primary
+       area_mm2  swir      SWIR hyperspectral  mm2   derived
+   
+   OUTPUT FORMAT
+.  Reply with exactly one line and nothing else:
+.  ANSWER: <dose in mg kg-1, digits only>; <AGREES or DISAGREES><|im_end|>
+ . <|im_start|>assistant
+:: <think>
+
+exp109-chain-0011-hard round 4 | modality_coverage | Qwen/Qwen3.5-35B-A3B-FP8
+  col1 = segment 0 'rgb2, msc1, vnir'  (decode steps 2866 2867 2868 2869 2870 2871 2872 2873 2874)
+  ramp ' .:-=+*#%@', level 0..9, each column scaled to its own max
+  3049 tokens, 226 lines
+==========================================================================================
+@ <|im_start|>user
+  SESSION
+  You are analysing experiment 109 at the Ashfield phenotyping facility: a copper
+  (Cu) dose series on 6 Thlaspi arvense (pennycress) accessions at 0, 20, 40, 80,
+. 160 and 320 mg kg-1, imaged over 28 days in six modalities.
+  
+  This is a 6-round investigation. Each round gives you the results of the tool
+  calls it needs, already run; how many there are varies by round. Later rounds
+  build on what you established earlier and will not repeat it, so keep your own
+  answers.
+  
+  TOOLS (results are inlined; you cannot issue new calls)
+    db_lookup(table=, select=, where=, group_by=)   the measurement store
+    schema_lookup(trait=)                           which modality records a trait, and in
+    qc_lookup(table=, select=, where=)              flags, exclusions, usable counts
+    design_lookup(aspect=)                          the protocol: dose series, accession p
+                                                    imaging rounds, replication plan
+    literature_lookup(species=, property=)          published claims
+    embedding_lookup(space=, query=, k=)            nearest accessions by profile similari
+  
+  TERMS
+    treatment        the copper dose, in mg kg-1
+    genotype         the accession label
+    Fv/Fm_Lss        photosystem-II efficiency, from the fc1 modality
+    area_mm2         leaf area
+    n_plants         distinct plants behind a cell
+    round_to_round   variance of an accession's per-round means
+    within_round     variance between plants inside one imaging round
+  
+  ROUND 1 - TASK (dose_response_shape)
+. At which copper dose does mean Fv/Fm_Lss peak across the panel?
+  
+  RULES
+  1. Two rows in the store carry a similar trait name. Only the
+     plant-level trait is the panel measurement; the dictionary says
+     which that is.
+  2. A treatment cell must clear the usable-plant floor in the quality
+     gate before it can be called a peak.
+  3. Judge the curve as a whole, not a single cell.
+  
+  TOOL OUTPUTS
+  
+  >>> qc_lookup(table="fc1_values", select=["treatment", "n_plants_usable"], where="trait=
+      plants surviving QC per treatment; the floor for a panel claim is 12.
+      treatment  n_plants_usable
+      ---------  ---------------
+      0          58
+      20         53
+      40         57
+      80         60
+      160        6
+      320        59
+  
+  >>> schema_lookup(trait="Fv/Fm_Lss")
+      trait dictionary: where the trait lives and at what entity level.
+      trait          modality  table       unit  entity_level
+      -------------  --------  ----------  ----  ------------
+      Fv/Fm_Lss      fc1       fc1_values  a.u.  plant
+      avg_Fv/Fm_Lss  fc1       fc1_values  a.u.  region
+  
+  >>> db_lookup(table="fc1_values", select=["trait", "mean_value"], where="experiment_id=1
+      mean value by trait, one column per treatment (mg kg-1).
+      trait          t0     t20    t40    t80    t160   t320
+      -------------  -----  -----  -----  -----  -----  -----
+      Fv/Fm_Lss      0.580  0.390  0.461  0.414  0.467  0.441
+  
+      avg_Fv/Fm_Lss  0.492  0.516  0.529  0.490  0.546  0.417
+  OUTPUT FORMAT
+  Reply with exactly one line and nothing else:
+. ANSWER: <dose in mg kg-1, digits only><|im_end|>
+  <|im_start|>assistant
+. ANSWER: 0<|im_end|>
+  <|im_start|>user
+  ROUND 2 - TASK (transition_sensitivity)
+  Starting from the copper dose you identified in round 1, which accession
+  loses the most Fv/Fm_Lss when the dose is raised to the next level of the
+  design series?
+  
+  RULES
+  1. The store also holds a pilot dose that is not a level of the
+     design series. The next level is the next one in the design
+     table, which need not be the next column.
+  2. Only accessions in the core panel can be ranked; observational
+     ones are carried for reference.
+  3. Compare each accession against itself across the two doses.
+  
+  TOOL OUTPUTS
+  
+  >>> db_lookup(table="fc1_values", select=["genotype", "mean_value"], where="trait='Fv/Fm
+      mean Fv/Fm_Lss by accession, one column per treatment in the store.
+      genotype   t20    t40    t60    t80
+      ---------  -----  -----  -----  -----
+      67         0.532  0.502  0.493  0.464
+      NIL 368    0.553  0.544  0.387  0.381
+      RIL 395    0.553  0.519  0.508  0.500
+      MAGIC 414  0.525  0.486  0.437  0.246
+      59         0.556  0.542  0.527  0.213
+  
+  >>> design_lookup(aspect="accession_panel")
+      panel membership for this experiment.
+      genotype   panel_role
+      ---------  -------------
+      67         core
+      NIL 368    core
+      RIL 395    core
+      MAGIC 414  core
+      59         observational
+  
+  >>> design_lookup(aspect="dose_series")
+      the design levels, in order. Doses absent here are pilot cells.
+      level  treatment
+      -----  ---------
+      1      0
+      2      20
+      3      40
+      4      80
+      5      160
+      6      320
+  
+  >>> literature_lookup(species="Thlaspi arvense", property="metal hyperaccumulation")
+      published shoot-concentration ranges; no dose-response claim attached.
+      source            species          property                 shoot_mg_kg
+      ----------------  ---------------  -----------------------  -----------
+      lit:Ferreira2020  Thlaspi arvense  metal hyperaccumulation  44-269
+  
+  OUTPUT FORMAT
+  Reply with exactly one line and nothing else:
+: ANSWER: <accession label exactly as it appears in the table><|im_end|>
+  <|im_start|>assistant
+- ANSWER: MAGIC 414<|im_end|>
+  <|im_start|>user
+  ROUND 3 - TASK (cross_modality_peak)
+  For the accession identified in round 2: at which dose does its leaf area
+  (area_mm2) peak, and does that dose agree with where Fv/Fm_Lss peaked
+  in round 1?
+  
+  RULES
+  1. More than one modality reports this trait. Use the one the
+     dictionary marks primary; the other is a derived estimate.
+  2. A cell flagged empty_mask carries no usable area and cannot be
+     the peak. low_mask_coverage is on nearly every row and is not a
+     reason to discard.
+  3. The verdict is AGREES when the area peak falls on the dose from
+     round 1, and DISAGREES otherwise. Report both parts.
+  
+  TOOL OUTPUTS
+  
+: >>> qc_lookup(table="rgb2_features", select=["genotype", "treatment", "flag"], where="fl
+      cells voided by empty_mask.
+      genotype   treatment  flag
+      ---------  ---------  ----------
+      MAGIC 414  80         empty_mask
+      59         160        empty_mask
+  
+  >>> db_lookup(table="features", select=["modality", "genotype", "mean_area_mm2"], where=
+      mean area_mm2 by modality and accession, one column per treatment.
+      modality  genotype   t0     t40    t80    t160
+      --------  ---------  -----  -----  -----  -----
+:     rgb2      MAGIC 414  9.83   11.71  26.53  22.03
+.     rgb2      59         13.85  22.56  13.25  11.49
+      rgb2      NIL 368    9.73   11.69  20.14  11.50
+      rgb2      RIL 395    18.31  9.40   8.24   5.58
+      swir      MAGIC 414  7.24   9.30   16.52  8.99
+      swir      59         8.54   9.24   16.90  9.70
+      swir      NIL 368    7.98   15.20  7.80   7.06
+      swir      RIL 395    3.72   5.72   6.39   13.92
+  
+  >>> schema_lookup(trait="area_mm2")
+      modalities reporting this trait.
+      trait     modality  modality_role       unit  trait_role
+      --------  --------  ------------------  ----  ----------
+.     area_mm2  rgb2      top-view RGB        mm2   primary
+      area_mm2  swir      SWIR hyperspectral  mm2   derived
+  
+  OUTPUT FORMAT
+  Reply with exactly one line and nothing else:
+: ANSWER: <dose in mg kg-1, digits only>; <AGREES or DISAGREES><|im_end|>
+  <|im_start|>assistant
+: ANSWER: 160; DISAGREES<|im_end|>
+  <|im_start|>user
+  ROUND 4 - TASK (modality_coverage)
+. For the accession identified in round 2: which modalities hold usable feature
+. rows for it in this experiment?
+  
+  RULES
+  1. A modality never scheduled for this experiment does not count,
+     even if rows for it exist: those were carried over.
+  2. A modality whose rows are all flagged holds nothing usable.
+. 3. List the modalities in the column order of the store table.
+  
+  TOOL OUTPUTS
+  
+  >>> qc_lookup(table="features", select=["genotype", "modality", "n_usable"], group_by=["
+      rows surviving QC, one column per modality.
+:     genotype   fc1  rgb2  msc1  vnir  swir  s3d
+      ---------  ---  ----  ----  ----  ----  ---
+.     MAGIC 414  0    55    65    18    14    0
+      59         0    59    62    0     0     48
+      NIL 368    23   64    63    0     0     17
+      RIL 395    0    66    63    0     0     15
+  
+  >>> db_lookup(table="features", select=["genotype", "modality", "n_rows"], group_by=["ge
+      feature rows per accession, one column per modality.
+:     genotype   fc1  rgb2  msc1  vnir  swir  s3d
+      ---------  ---  ----  ----  ----  ----  ---
+      MAGIC 414  39   58    67    19    17    0
+      59         0    59    64    0     0     48
+      NIL 368    24   67    66    0     0     19
+      RIL 395    0    67    65    0     0     17
+  
+  >>> design_lookup(aspect="imaging_rounds")
+      imaging rounds scheduled per modality for this experiment.
+      modality  records                   rounds_scheduled
+      --------  ------------------------  ----------------
+      fc1       chlorophyll fluorescence  45
+.     rgb2      top-view RGB              54
+.     msc1      multispectral             52
+      vnir      VNIR hyperspectral        42
+      swir      SWIR hyperspectral        0
+      s3d       3-D structural scan       42
+  
+  OUTPUT FORMAT
+  Reply with exactly one line and nothing else:
+* ANSWER: <modalities, comma separated, in table column order><|im_end|>
+  <|im_start|>assistant
+  <think>
+
+exp109-chain-0011-hard round 6 | variance_regime | Qwen/Qwen3.5-35B-A3B-FP8
+  col1 = segment 0 'MAGIC 414@160'  (decode steps 1841 1842 1843 1844 1845 1846 1847 1848 1849)
+  ramp ' .:-=+*#%@', level 0..9, each column scaled to its own max
+  4628 tokens, 327 lines
+==========================================================================================
+@ <|im_start|>user
+  SESSION
+  You are analysing experiment 109 at the Ashfield phenotyping facility: a copper
+  (Cu) dose series on 6 Thlaspi arvense (pennycress) accessions at 0, 20, 40, 80,
+  160 and 320 mg kg-1, imaged over 28 days in six modalities.
+  
+  This is a 6-round investigation. Each round gives you the results of the tool
+  calls it needs, already run; how many there are varies by round. Later rounds
+. build on what you established earlier and will not repeat it, so keep your own
+  answers.
+  
+  TOOLS (results are inlined; you cannot issue new calls)
+    db_lookup(table=, select=, where=, group_by=)   the measurement store
+    schema_lookup(trait=)                           which modality records a trait, and in
+.   qc_lookup(table=, select=, where=)              flags, exclusions, usable counts
+    design_lookup(aspect=)                          the protocol: dose series, accession p
+                                                    imaging rounds, replication plan
+    literature_lookup(species=, property=)          published claims
+    embedding_lookup(space=, query=, k=)            nearest accessions by profile similari
+  
+  TERMS
+    treatment        the copper dose, in mg kg-1
+    genotype         the accession label
+    Fv/Fm_Lss        photosystem-II efficiency, from the fc1 modality
+    area_mm2         leaf area
+    n_plants         distinct plants behind a cell
+    round_to_round   variance of an accession's per-round means
+    within_round     variance between plants inside one imaging round
+  
+  ROUND 1 - TASK (dose_response_shape)
+  At which copper dose does mean Fv/Fm_Lss peak across the panel?
+  
+  RULES
+. 1. Two rows in the store carry a similar trait name. Only the
+     plant-level trait is the panel measurement; the dictionary says
+     which that is.
+  2. A treatment cell must clear the usable-plant floor in the quality
+     gate before it can be called a peak.
+. 3. Judge the curve as a whole, not a single cell.
+  
+  TOOL OUTPUTS
+  
+  >>> qc_lookup(table="fc1_values", select=["treatment", "n_plants_usable"], where="trait=
+      plants surviving QC per treatment; the floor for a panel claim is 12.
+      treatment  n_plants_usable
+      ---------  ---------------
+      0          58
+.     20         53
+      40         57
+      80         60
+      160        6
+      320        59
+  
+  >>> schema_lookup(trait="Fv/Fm_Lss")
+      trait dictionary: where the trait lives and at what entity level.
+      trait          modality  table       unit  entity_level
+      -------------  --------  ----------  ----  ------------
+      Fv/Fm_Lss      fc1       fc1_values  a.u.  plant
+      avg_Fv/Fm_Lss  fc1       fc1_values  a.u.  region
+  
+  >>> db_lookup(table="fc1_values", select=["trait", "mean_value"], where="experiment_id=1
+      mean value by trait, one column per treatment (mg kg-1).
+      trait          t0     t20    t40    t80    t160   t320
+      -------------  -----  -----  -----  -----  -----  -----
+      Fv/Fm_Lss      0.580  0.390  0.461  0.414  0.467  0.441
+  
+.     avg_Fv/Fm_Lss  0.492  0.516  0.529  0.490  0.546  0.417
+  OUTPUT FORMAT
+  Reply with exactly one line and nothing else:
+. ANSWER: <dose in mg kg-1, digits only><|im_end|>
+  <|im_start|>assistant
+  ANSWER: 0<|im_end|>
+  <|im_start|>user
+  ROUND 2 - TASK (transition_sensitivity)
+  Starting from the copper dose you identified in round 1, which accession
+  loses the most Fv/Fm_Lss when the dose is raised to the next level of the
+  design series?
+  
+  RULES
+  1. The store also holds a pilot dose that is not a level of the
+     design series. The next level is the next one in the design
+     table, which need not be the next column.
+  2. Only accessions in the core panel can be ranked; observational
+     ones are carried for reference.
+  3. Compare each accession against itself across the two doses.
+  
+  TOOL OUTPUTS
+  
+  >>> db_lookup(table="fc1_values", select=["genotype", "mean_value"], where="trait='Fv/Fm
+      mean Fv/Fm_Lss by accession, one column per treatment in the store.
+      genotype   t20    t40    t60    t80
+      ---------  -----  -----  -----  -----
+      67         0.532  0.502  0.493  0.464
+      NIL 368    0.553  0.544  0.387  0.381
+      RIL 395    0.553  0.519  0.508  0.500
+.     MAGIC 414  0.525  0.486  0.437  0.246
+      59         0.556  0.542  0.527  0.213
+  
+  >>> design_lookup(aspect="accession_panel")
+      panel membership for this experiment.
+      genotype   panel_role
+      ---------  -------------
+      67         core
+      NIL 368    core
+      RIL 395    core
+      MAGIC 414  core
+      59         observational
+  
+  >>> design_lookup(aspect="dose_series")
+      the design levels, in order. Doses absent here are pilot cells.
+      level  treatment
+      -----  ---------
+      1      0
+      2      20
+      3      40
+.     4      80
+      5      160
+      6      320
+  
+  >>> literature_lookup(species="Thlaspi arvense", property="metal hyperaccumulation")
+      published shoot-concentration ranges; no dose-response claim attached.
+      source            species          property                 shoot_mg_kg
+      ----------------  ---------------  -----------------------  -----------
+      lit:Ferreira2020  Thlaspi arvense  metal hyperaccumulation  44-269
+  
+  OUTPUT FORMAT
+  Reply with exactly one line and nothing else:
+  ANSWER: <accession label exactly as it appears in the table><|im_end|>
+  <|im_start|>assistant
+  ANSWER: MAGIC 414<|im_end|>
+  <|im_start|>user
+  ROUND 3 - TASK (cross_modality_peak)
+  For the accession identified in round 2: at which dose does its leaf area
+  (area_mm2) peak, and does that dose agree with where Fv/Fm_Lss peaked
+  in round 1?
+  
+  RULES
+  1. More than one modality reports this trait. Use the one the
+     dictionary marks primary; the other is a derived estimate.
+  2. A cell flagged empty_mask carries no usable area and cannot be
+     the peak. low_mask_coverage is on nearly every row and is not a
+     reason to discard.
+  3. The verdict is AGREES when the area peak falls on the dose from
+     round 1, and DISAGREES otherwise. Report both parts.
+  
+  TOOL OUTPUTS
+  
+  >>> qc_lookup(table="rgb2_features", select=["genotype", "treatment", "flag"], where="fl
+      cells voided by empty_mask.
+      genotype   treatment  flag
+      ---------  ---------  ----------
+      MAGIC 414  80         empty_mask
+      59         160        empty_mask
+  
+  >>> db_lookup(table="features", select=["modality", "genotype", "mean_area_mm2"], where=
+      mean area_mm2 by modality and accession, one column per treatment.
+      modality  genotype   t0     t40    t80    t160
+      --------  ---------  -----  -----  -----  -----
+      rgb2      MAGIC 414  9.83   11.71  26.53  22.03
+      rgb2      59         13.85  22.56  13.25  11.49
+      rgb2      NIL 368    9.73   11.69  20.14  11.50
+      rgb2      RIL 395    18.31  9.40   8.24   5.58
+      swir      MAGIC 414  7.24   9.30   16.52  8.99
+      swir      59         8.54   9.24   16.90  9.70
+      swir      NIL 368    7.98   15.20  7.80   7.06
+.     swir      RIL 395    3.72   5.72   6.39   13.92
+  
+  >>> schema_lookup(trait="area_mm2")
+      modalities reporting this trait.
+      trait     modality  modality_role       unit  trait_role
+      --------  --------  ------------------  ----  ----------
+      area_mm2  rgb2      top-view RGB        mm2   primary
+      area_mm2  swir      SWIR hyperspectral  mm2   derived
+  
+  OUTPUT FORMAT
+  Reply with exactly one line and nothing else:
+  ANSWER: <dose in mg kg-1, digits only>; <AGREES or DISAGREES><|im_end|>
+  <|im_start|>assistant
+  ANSWER: 160; DISAGREES<|im_end|>
+  <|im_start|>user
+  ROUND 4 - TASK (modality_coverage)
+  For the accession identified in round 2: which modalities hold usable feature
+  rows for it in this experiment?
+  
+  RULES
+  1. A modality never scheduled for this experiment does not count,
+     even if rows for it exist: those were carried over.
+  2. A modality whose rows are all flagged holds nothing usable.
+  3. List the modalities in the column order of the store table.
+  
+  TOOL OUTPUTS
+  
+  >>> qc_lookup(table="features", select=["genotype", "modality", "n_usable"], group_by=["
+      rows surviving QC, one column per modality.
+      genotype   fc1  rgb2  msc1  vnir  swir  s3d
+      ---------  ---  ----  ----  ----  ----  ---
+      MAGIC 414  0    55    65    18    14    0
+      59         0    59    62    0     0     48
+      NIL 368    23   64    63    0     0     17
+      RIL 395    0    66    63    0     0     15
+  
+  >>> db_lookup(table="features", select=["genotype", "modality", "n_rows"], group_by=["ge
+      feature rows per accession, one column per modality.
+      genotype   fc1  rgb2  msc1  vnir  swir  s3d
+      ---------  ---  ----  ----  ----  ----  ---
+      MAGIC 414  39   58    67    19    17    0
+      59         0    59    64    0     0     48
+:     NIL 368    24   67    66    0     0     19
+      RIL 395    0    67    65    0     0     17
+  
+  >>> design_lookup(aspect="imaging_rounds")
+      imaging rounds scheduled per modality for this experiment.
+      modality  records                   rounds_scheduled
+      --------  ------------------------  ----------------
+      fc1       chlorophyll fluorescence  45
+      rgb2      top-view RGB              54
+      msc1      multispectral             52
+      vnir      VNIR hyperspectral        42
+      swir      SWIR hyperspectral        0
+      s3d       3-D structural scan       42
+  
+  OUTPUT FORMAT
+  Reply with exactly one line and nothing else:
+  ANSWER: <modalities, comma separated, in table column order><|im_end|>
+  <|im_start|>assistant
+  ANSWER: rgb2, msc1, vnir<|im_end|>
+  <|im_start|>user
+  ROUND 5 - TASK (power_check)
+  For the accession identified in round 2, at the dose identified in round 1: is
+  that cell replicated well enough to carry a genotype-level claim, and on how
+  many plants does that verdict rest?
+  
+  RULES
+  1. The count that matters is plants remaining after exclusions, not
+     the raw count in the store.
+  2. The floor depends on the claim level and is set by this study's
+     replication plan; do not assume a value.
+. 3. Report the verdict and the count behind it.
+  
+  TOOL OUTPUTS
+  
+  >>> design_lookup(aspect="replication_plan")
+      minimum usable plants per claim level in this study.
+      claim_level     min_usable_plants
+      --------------  -----------------
+      genotype-level  7
+      panel-level     24
+  
+  >>> qc_lookup(table="fc1_values", select=["genotype", "n_plants_excluded"], where="flag 
+      plants excluded per cell, one column per treatment.
+      genotype   t20  t40  t60  t80
+      ---------  ---  ---  ---  ---
+      MAGIC 414  0    4    2    2
+      59         1    2    3    2
+      NIL 368    3    2    2    2
+.     RIL 395    1    3    2    0
+  
+  >>> db_lookup(table="fc1_values", select=["genotype", "n_plants"], group_by=["genotype",
+      plants recorded per accession, one column per treatment.
+      genotype   t20  t40  t60  t80
+      ---------  ---  ---  ---  ---
+      MAGIC 414  20   11   19   37
+      59         50   35   33   28
+      NIL 368    42   23   11   22
+.     RIL 395    46   12   57   52
+  
+  OUTPUT FORMAT
+  Reply with exactly one line and nothing else:
+  ANSWER: <WELL_REPLICATED or UNDERPOWERED>; <usable plants><|im_end|>
+  <|im_start|>assistant
+  <|im_end|>
+  <|im_start|>user
+  ROUND 6 - TASK (variance_regime)
+  Name the cell -- accession and dose -- at which the accession identified in
+. round 2 first shows round-to-round variance of Fv/Fm_Lss exceeding its
+: within-round variance.
+  
+  RULES
+= 1. The two variances come from separate queries; compare them cell by
+     cell.
+  2. A cell built on fewer than 3 imaging rounds is not
+:    comparable and must be skipped, however its numbers look.
+. 3. Report the first qualifying dose reading left to right, not the
+.    largest gap, and name the accession alongside it.
+  
+  TOOL OUTPUTS
+  
+. >>> db_lookup(table="fc1_values", select=["genotype", "within_round"], where="trait='Fv/
+.     within-round variance, one column per treatment.
+      genotype   t0     t20    t40    t80    t160   t320
+      ---------  -----  -----  -----  -----  -----  -----
+:     MAGIC 414  0.029  0.044  0.058  0.038  0.054  0.053
+.     59         0.022  0.056  0.012  0.027  0.050  0.054
+.     NIL 368    0.029  0.054  0.056  0.071  0.052  0.045
+      RIL 395    0.037  0.039  0.045  0.058  0.078  0.060
+  
+  >>> qc_lookup(table="fc1_values", select=["genotype", "n_rounds"], where="trait='Fv/Fm_L
+      imaging rounds behind each cell, one column per treatment.
+      genotype   t0  t20  t40  t80  t160  t320
+      ---------  --  ---  ---  ---  ----  ----
+      MAGIC 414  9   4    4    1    4     5
+      59         5   4    7    5    7     4
+.     NIL 368    8   8    4    7    7     9
+.     RIL 395    8   4    6    5    7     6
+  
+  >>> embedding_lookup(space="spectral_signature", query="panel", k=2)
+      nearest accessions by mean spectral signature.
+      genotype   neighbour_1
+      ---------  ---------------
+.     59         RIL 395 (0.635)
+      NIL 368    Esp50 (0.750)
+      MAGIC 414  59 (0.770)
+  
+  >>> db_lookup(table="fc1_values", select=["genotype", "round_to_round"], where="trait='F
+.     round-to-round variance, one column per treatment.
+      genotype   t0     t20    t40    t80    t160   t320
+      ---------  -----  -----  -----  -----  -----  -----
+      MAGIC 414  0.015  0.028  0.037  0.052  0.064  0.076
+.     59         0.014  0.026  0.041  0.052  0.063  0.074
+.     NIL 368    0.016  0.027  0.039  0.050  0.062  0.074
+      RIL 395    0.017  0.026  0.038  0.050  0.064  0.075
+  
+  OUTPUT FORMAT
+  Reply with exactly one line and nothing else:
+  ANSWER: <accession>@<dose><|im_end|>
+  <|im_start|>assistant
+. <think>
